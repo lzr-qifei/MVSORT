@@ -1,0 +1,6 @@
+det_thresh : 0.4
+max_age : 3
+mal_thresh : 35   #distance threshold of first association, calculated by Mahalanobis Distance 
+eu_thresh : 160   #distance threshold of first association, calculated by Euclidean Distance
+sec_thresh : 300  #distance threshold of second association
+is_velocity_const : False

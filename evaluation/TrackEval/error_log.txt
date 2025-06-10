@@ -1,0 +1,356 @@
+WildTrack
+output.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 207, in _load_raw_file
+    file = self.config["GT_LOC_FORMAT"].format(gt_folder=self.gt_fol)
+KeyError: 'gt_loc'
+
+
+
+
+
+WildTrack
+output.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 152, in _load_simple_text_file
+    fp = open(file)
+FileNotFoundError: [Errno 2] No such file or directory: "/home/lizirui/TrackEval/MOT/gt/['wild_gt.txt']"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 212, in _load_raw_file
+    read_data, ignore_data = self._load_simple_text_file(file, is_zipped=self.data_is_zipped, zip_file=zip_file)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 209, in _load_simple_text_file
+    raise TrackEvalException(
+trackeval.utils.TrackEvalException: File ['wild_gt.txt'] cannot be read because it is either not present or invalidly formatted
+
+
+
+
+
+WildTrack
+output.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 152, in _load_simple_text_file
+    fp = open(file)
+FileNotFoundError: [Errno 2] No such file or directory: "/home/lizirui/gt/WildTrack/HOTA/['gt.txt']"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 212, in _load_raw_file
+    read_data, ignore_data = self._load_simple_text_file(file, is_zipped=self.data_is_zipped, zip_file=zip_file)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 209, in _load_simple_text_file
+    raise TrackEvalException(
+trackeval.utils.TrackEvalException: File ['gt.txt'] cannot be read because it is either not present or invalidly formatted
+
+
+
+
+
+WildTrack
+output.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 152, in _load_simple_text_file
+    fp = open(file)
+FileNotFoundError: [Errno 2] No such file or directory: "/home/lizirui/gt/WildTrack/HOTA/['gt.txt']"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 212, in _load_raw_file
+    read_data, ignore_data = self._load_simple_text_file(file, is_zipped=self.data_is_zipped, zip_file=zip_file)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 209, in _load_simple_text_file
+    raise TrackEvalException(
+trackeval.utils.TrackEvalException: File ['gt.txt'] cannot be read because it is either not present or invalidly formatted
+
+
+
+
+
+WildTrack
+output.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 152, in _load_simple_text_file
+    fp = open(file)
+FileNotFoundError: [Errno 2] No such file or directory: "/home/lizirui/gt/WildTrack/HOTA/['gt.txt']"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 213, in _load_raw_file
+    read_data, ignore_data = self._load_simple_text_file(file, is_zipped=self.data_is_zipped, zip_file=zip_file)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 209, in _load_simple_text_file
+    raise TrackEvalException(
+trackeval.utils.TrackEvalException: File ['gt.txt'] cannot be read because it is either not present or invalidly formatted
+
+
+
+
+
+WildTrack
+HOTAoutput.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 235, in _load_raw_file
+    text + ' data contains the following invalid timesteps in seq %s: ' % seq + ', '.join(
+NameError: name 'seq' is not defined
+
+
+
+
+
+MultiviewX
+mvx_gt_HOTA.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 634, in _load_raw_file
+    file = self.config["GT_LOC_FORMAT"].format(gt_folder=self.gt_fol)
+KeyError: 'gt_loc'
+
+
+
+
+
+MultiviewX
+mvx_gt_HOTA.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 152, in _load_simple_text_file
+    fp = open(file)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lizirui/gt/MultiviewX/HOTA/gt.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 639, in _load_raw_file
+    read_data, ignore_data = self._load_simple_text_file(file, is_zipped=self.data_is_zipped, zip_file=zip_file)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 209, in _load_simple_text_file
+    raise TrackEvalException(
+trackeval.utils.TrackEvalException: File gt.txt cannot be read because it is either not present or invalidly formatted
+
+
+
+
+
+MultiviewX
+mvx_gt_HOTA.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 152, in _load_simple_text_file
+    fp = open(file)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lizirui/gt/MultiviewX/HOTA/gt.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 220, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, is_gt=True)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/mot_multiview_bev_points.py", line 639, in _load_raw_file
+    read_data, ignore_data = self._load_simple_text_file(file, is_zipped=self.data_is_zipped, zip_file=zip_file)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/datasets/_base_dataset.py", line 209, in _load_simple_text_file
+    raise TrackEvalException(
+trackeval.utils.TrackEvalException: File gt.txt cannot be read because it is either not present or invalidly formatted
+
+
+
+
+
+MultiviewX
+mvx_pred_HOTA.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 226, in eval_sequence
+    seq_res[cls][met_name] = metric.eval_sequence(data)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/metrics/hota.py", line 94, in eval_sequence
+    score_mat = global_alignment_score[gt_ids_t[:, np.newaxis], tracker_ids_t[np.newaxis, :]] * similarity
+ValueError: operands could not be broadcast together with shapes (38,38,63) (38,38) 
+
+
+
+
+
+MultiviewX
+mvx_pred_HOTA.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 226, in eval_sequence
+    seq_res[cls][met_name] = metric.eval_sequence(data)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/metrics/hota.py", line 96, in eval_sequence
+    score_mat = global_alignment_score[gt_ids_t[:, np.newaxis], tracker_ids_t[np.newaxis, :]] * similarity
+ValueError: operands could not be broadcast together with shapes (38,38,63) (38,38) 
+
+
+
+
+
+MultiviewX
+mota_pred_HOTA.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 226, in eval_sequence
+    seq_res[cls][met_name] = metric.eval_sequence(data)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/metrics/hota.py", line 126, in eval_sequence
+    ass_re = matches_count / np.maximum(1, gt_id_count)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/metrics/hota.py", line 126, in eval_sequence
+    ass_re = matches_count / np.maximum(1, gt_id_count)
+  File "/home/lizirui/miniconda3/envs/py310/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/lizirui/miniconda3/envs/py310/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+
+
+
+
+MultiviewX
+mota_pred_HOTA.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 226, in eval_sequence
+    seq_res[cls][met_name] = metric.eval_sequence(data)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/metrics/hota.py", line 126, in eval_sequence
+    ass_re = matches_count / np.maximum(1, gt_id_count)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/metrics/hota.py", line 126, in eval_sequence
+    ass_re = matches_count / np.maximum(1, gt_id_count)
+  File "/home/lizirui/miniconda3/envs/py310/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/lizirui/miniconda3/envs/py310/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+
+
+
+
+MultiviewX
+mota_pred_HOTA.txt
+Traceback (most recent call last):
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 110, in evaluate
+    res[curr_seq] = eval_sequence(dataset, tracker, class_list, metrics_list,
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/eval.py", line 226, in eval_sequence
+    seq_res[cls][met_name] = metric.eval_sequence(data)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/_timing.py", line 17, in wrap
+    result = f(*args, **kw)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/metrics/hota.py", line 126, in eval_sequence
+    ass_re = matches_count / np.maximum(1, gt_id_count)
+  File "/home/lizirui/MVdetr/multiview_detector/evaluation/TrackEval/trackeval/metrics/hota.py", line 126, in eval_sequence
+    ass_re = matches_count / np.maximum(1, gt_id_count)
+  File "/home/lizirui/miniconda3/envs/py310/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/lizirui/miniconda3/envs/py310/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+
+
+
+
