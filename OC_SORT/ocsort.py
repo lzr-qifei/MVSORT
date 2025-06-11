@@ -224,7 +224,8 @@ ASSO_FUNCS = {  "iou": iou_batch,
 
 class OCSort(object):
     def __init__(self, det_thresh, max_age=3, min_hits=1, 
-        m_threshold=0.6,e_dist_threshold = 150, sec_thresh=200,delta_t=1, asso_func="ct_dist", inertia=0.5, use_byte=False , is_velocity_const=False):
+        m_threshold=0.6,e_dist_threshold = 150, sec_thresh=200,delta_t=1,
+         asso_func="ct_dist", inertia=0.5, use_byte=False , is_velocity_const=False, orig=False):
         """
         Sets key parameters for SORT
         """
@@ -248,6 +249,7 @@ class OCSort(object):
         self.sec_thresh = 225
         self.visualize = False
         self.is_velocity_const = is_velocity_const
+        self.orig = orig
 
     def update(self, output_results):
         """
@@ -407,7 +409,7 @@ class OCSort(object):
 
         # create and initialise new trackers for unmatched detections
         for i in unmatched_dets:
-            trk = KalmanBoxTracker(dets[i, :-1], delta_t=self.delta_t,orig=False,constant=self.is_velocity_const)
+            trk = KalmanBoxTracker(dets[i, :-1], delta_t=self.delta_t,orig=self.orig,constant=self.is_velocity_const)
             self.trackers.append(trk)
         i = len(self.trackers)
         for trk in reversed(self.trackers):

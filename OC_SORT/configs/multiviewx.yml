@@ -4,3 +4,4 @@ mal_thresh : 32   #distance threshold of first association, calculated by Mahala
 eu_thresh : 150   #distance threshold of first association, calculated by Euclidean Distance
 sec_thresh : 225  #distance threshold of second association
 is_velocity_const : False
+use_orig_KF : False

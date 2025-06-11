@@ -198,7 +198,8 @@ def main():
     # 初始化 SORT tracker
 
     tracker = OCSort(det_thresh=config['det_thresh'], max_age=config['max_age'], m_threshold=config['mal_thresh'],
-     e_dist_threshold = config['eu_thresh'], sec_thresh=config['sec_thresh'], is_velocity_const=config['is_velocity_const'])
+     e_dist_threshold = config['eu_thresh'], sec_thresh=config['sec_thresh'],
+      is_velocity_const=config['is_velocity_const'], orig=config['use_orig_KF'])
     # tracker = OCSort_opps(det_thresh=0.1, use_byte=False)
 
     # 存储跟踪结果
