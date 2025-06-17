@@ -224,17 +224,17 @@ ASSO_FUNCS = {  "iou": iou_batch,
 
 class OCSort(object):
     def __init__(self, det_thresh, max_age=3, min_hits=1, 
-        m_threshold=0.6,e_dist_threshold = 150, sec_thresh=200,delta_t=1,
-         asso_func="ct_dist", inertia=0.5, use_byte=False , is_velocity_const=False, orig=False):
+        m_threshold=0.6,e_dist_threshold = 150, sec_thresh=200,delta_t=3,
+         asso_func="ct_dist", inertia=0.1, use_byte=False , is_velocity_const=False, orig=False):
         """
         Sets key parameters for SORT
         """
         self.max_age = max_age
         self.min_hits = min_hits
+        self.e_dist_threshold = e_dist_threshold
+        self.m_dist_threshold = m_threshold
         # self.e_dist_threshold = 150
-        # self.m_dist_threshold = 50
-        self.e_dist_threshold = 150
-        self.m_dist_threshold = 32
+        # self.m_dist_threshold = 32
         self.trackers = []
         self.frame_count = 0
         self.det_thresh = det_thresh
@@ -246,7 +246,7 @@ class OCSort(object):
         self.dist_mean = 0
         KalmanBoxTracker.count = 0
         self.histogram = MatrixHistogram()
-        self.sec_thresh = 225
+        self.sec_thresh = sec_thresh
         self.visualize = False
         self.is_velocity_const = is_velocity_const
         self.orig = orig
@@ -315,24 +315,19 @@ class OCSort(object):
         """
             First round of association
         """
-        # matched, unmatched_dets, unmatched_trks = associate(
-        #     dets, trks, self.dist_threshold, velocities, k_observations, self.inertia)
-
         if self.trackers !=[]:
             dets_x =  np.hstack([dets[:,:2], np.zeros((dets.shape[0], 2))])
             trks_x = np.hstack([trks[:,:2], velocities])
             # matched, unmatched_dets, unmatched_trks,dist_matrix = associate(
             #     dets, trks, self.e_dist_threshold, velocities,
             #     k_observations, self.inertia)
-            if self.visualize and self.frame_count == 10:
-                # save_mdist_results(trks_x, covs)
-                map_e, map_m = mdist_vis(trks_x, covs)
-                print(len(map_e))
-                visualize_pedestrian_movements(trks_x, map_e, map_m, 
-                               output_dir='/home/lizirui/vis_wild', 
-                               file_prefix='example_movement')
-
-
+            # if self.visualize and self.frame_count == 10:
+            #     # save_mdist_results(trks_x, covs)
+            #     map_e, map_m = mdist_vis(trks_x, covs)
+            #     print(len(map_e))
+            #     visualize_pedestrian_movements(trks_x, map_e, map_m, 
+            #                    output_dir='/home/lizirui/vis_wild', 
+            #                    file_prefix='example_movement')
             matched, unmatched_dets, unmatched_trks,dist_matrix = associate_new(
                 dets, trks, self.m_dist_threshold, velocities,
                 k_observations, self.inertia,covs,dets_x,trks_x)
