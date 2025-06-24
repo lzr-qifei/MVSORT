@@ -14,8 +14,8 @@ def process_tracking_file(input_file, output_file):
         # 提取所需的数据并创建新的行格式
         frame_id = parts[1]
         target_id = parts[2]
-        x = parts[8]
-        y = parts[9]
+        x = parts[9]
+        y = parts[8]
         
         new_line = f"{frame_id},{target_id},{x},{y},0,0,1,1,1.000000\n"
         processed_lines.append(new_line)

@@ -47,6 +47,7 @@ def mot_metrics_wild(tSource, gtSource,output_folder, scale=0.025):
     mh = mm.metrics.create()
     # summary = mh.compute_many(accs, metrics=['HOTA'], generate_overall=True)
     summary = mh.compute_many(accs, metrics=mm.metrics.motchallenge_metrics, generate_overall=True)
+    summary["motp"] = 1 - summary["motp"]
     print("\n")
     strsummary = mm.io.render_summary(
         summary,

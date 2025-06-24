@@ -9,7 +9,7 @@ DET_PATH='/home/lizirui/det_results/MVOT/mvot-multiviewx.txt'
 GT_CLEAR_PATH='/home/lizirui/gt/MultiviewX/CLEAR/mota_gt.txt'
 # PRED_FOLDER='/home/lizirui/MVdetr/multiview_detector/tracker/OC_SORT/wild_results'
 # PRED_FOLDER='/home/lizirui/MVdetr/multiview_detector/tracker/OC_SORT/mvx_results'
-PRED_FOLDER='/home/lizirui/MVSORT/src/mvx_results/'
+PRED_FOLDER='/home/lizirui/det_results/MVOT/'
 python3 /home/lizirui/MVSORT/src/track.py \
  --det_path $DET_PATH --output_folder $PRED_FOLDER --eval multiviewx \
   --gt $GT_CLEAR_PATH --exp_name mota_pred --cfg /home/lizirui/MVSORT/src/configs/multiviewx.yml

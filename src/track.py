@@ -129,7 +129,7 @@ def visualize_tracking_results(tracking_results, save_path=None,dataset='wild'):
         tracks[trk_id].append((frame_id, x, y))
 
     # Plot all frames in a single figure with higher resolution
-    plt.figure(figsize=(12, 8), dpi=300)  # Set figure size and DPI
+    plt.figure(figsize=(8, 6), dpi=600)  # Set figure size and DPI
     plt.title('Tracking Results')
     if dataset=='wild':
         plt.xlim(0, 480)  # Adjust based on your data range
@@ -138,7 +138,15 @@ def visualize_tracking_results(tracking_results, save_path=None,dataset='wild'):
         plt.xlim(0, 1000)  # Adjust based on your data range
         plt.ylim(0, 640)  # Adjust based on your data range
 
-    for trk_id, track in tracks.items():
+    # plot_track = tracks[list(tracks.keys())[:10]] if len(list(tracks.keys()))>=10 else tracks
+    if len(tracks) >= 20:
+        keys_to_use = list(tracks.keys())[:20]
+        plot_track = {k: tracks[k] for k in keys_to_use}
+    else:
+        plot_track = tracks
+
+    for trk_id, track in plot_track.items():
+        #only draw 10 tracks
         # Sort by frame_id to ensure the trajectory is plotted correctly
         track = sorted(track)  # Sort by frame_id
         xs = [x for _, x, _ in track]
@@ -156,7 +164,7 @@ def visualize_tracking_results(tracking_results, save_path=None,dataset='wild'):
 
     # Save the plot if a path is provided
     if save_path:
-        plt.savefig(save_path, dpi=300)  # Save with higher DPI
+        plt.savefig(save_path, dpi=600)  # Save with higher DPI
 
 def main():
     # 从命令行获取输入参数
@@ -223,7 +231,7 @@ def main():
     # 可视化跟踪结果
     visualize_tracking_results(tracking_results, vis_path,args.eval)
     if evaluator is not None:
-        evaluator(output_file,gtfile,output_folder,1)
+        evaluator(output_file,gtfile,output_folder,0.025)
 
 if __name__ == "__main__":
     main()

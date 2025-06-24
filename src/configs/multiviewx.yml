@@ -3,5 +3,5 @@ max_age : 3
 mal_thresh : 32   #distance threshold of first association, calculated by Mahalanobis Distance 
 eu_thresh : 50   #distance threshold of first association, calculated by Euclidean Distance
 sec_thresh : 215  #distance threshold of second association
-is_velocity_const : True
+is_velocity_const : False
 use_orig_KF : False
